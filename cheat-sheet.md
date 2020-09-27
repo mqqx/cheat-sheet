@@ -12,3 +12,10 @@ only specific package
 
 additional properties: https://www.mojohaus.org/versions-maven-plugin/use-reactor-mojo.html
 
+### build with profile
+
+    mvn clean install -P profile
+
+### execute enforcer
+
+    mvn validate
