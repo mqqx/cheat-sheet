@@ -19,3 +19,14 @@ additional properties: https://www.mojohaus.org/versions-maven-plugin/use-reacto
 ### execute enforcer
 
     mvn validate
+
+## git
+
+### change repository specific author
+
+add the following to `%PROJECT_BASE%/.git/config` file
+
+    
+    [user]
+          name = username
+          email = username@domain.com
