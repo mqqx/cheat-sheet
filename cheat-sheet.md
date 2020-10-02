@@ -30,3 +30,13 @@ add the following to `%PROJECT_BASE%/.git/config` file
     [user]
           name = username
           email = username@domain.com
+
+## kubectl
+
+### list all deployments
+
+    kubectl get deployments --all-namespaces
+    
+### delete deployment
+    
+    kubectl delete -n NAMESPACE deployment DEPLOYMENT
