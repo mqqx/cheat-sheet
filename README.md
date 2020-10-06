@@ -1,6 +1,6 @@
 # cheat sheet
 
-commonly helpful commands
+collection of useful commands and hints
 
 ## contents
 
