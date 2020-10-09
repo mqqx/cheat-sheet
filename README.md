@@ -42,40 +42,28 @@ add the following to `%PROJECT_BASE%/.git/config` file
 
 ### list all deployments
 
-```console
-kubectl get deployments --all-namespaces
-```
+    kubectl get deployments --all-namespaces
     
 ### delete deployment
     
-```console
-kubectl delete -n NAMESPACE deployment DEPLOYMENT
-```
+    kubectl delete -n NAMESPACE deployment DEPLOYMENT
 
 ## maven
 
 ### update versions to latest releases 
 
-```console
-mvn versions:use-latest-releases -DexcludeReactor=false -DgenerateBackupPoms=false
-```
+    mvn versions:use-latest-releases -DexcludeReactor=false -DgenerateBackupPoms=false
 
 only specific package
 
-```console
-mvn versions:use-latest-releases -Dincludes=package.to.include -DexcludeReactor=false -DgenerateBackupPoms=false
-```
+    mvn versions:use-latest-releases -Dincludes=package.to.include -DexcludeReactor=false -DgenerateBackupPoms=false
 
 additional properties: https://www.mojohaus.org/versions-maven-plugin/use-reactor-mojo.html
 
 ### build with profile
 
-```console
-mvn clean install -P profile
-```
+    mvn clean install -P profile
 
 ### execute enforcer
 
-```console
-mvn validate
-```
+    mvn validate
