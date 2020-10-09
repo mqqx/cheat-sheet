@@ -7,6 +7,7 @@ collection of useful commands and hints
 - [contents](#contents)
 - [curl](#curl)
 - [git](#git)
+- [java](#java)
 - [kubectl](#kubectl)
 - [maven](#maven)
 
@@ -22,11 +23,28 @@ collection of useful commands and hints
 ### change repository specific author
 
 add the following to `%PROJECT_BASE%/.git/config` file
-
     
     [user]
-          name = username
-          email = username@domain.com
+          name = mqqx
+          email = repository@mqqx.dev
+          
+## java
+
+### useful libs
+
+* Apache Batik - svg manipulation
+* Apache Commons / Google Guava - useful utility methods (`StringUtils`, `Strings`, `Sets`, ...)
+* Apache Tika - content type detection (`new Tika().detect(base64ByteArray)`)
+
+## kubectl
+
+### list all deployments
+
+    kubectl get deployments --all-namespaces
+    
+### delete deployment
+    
+    kubectl delete -n NAMESPACE deployment DEPLOYMENT
 
 ## maven
 
@@ -47,13 +65,3 @@ additional properties: https://www.mojohaus.org/versions-maven-plugin/use-reacto
 ### execute enforcer
 
     mvn validate
-
-## kubectl
-
-### list all deployments
-
-    kubectl get deployments --all-namespaces
-    
-### delete deployment
-    
-    kubectl delete -n NAMESPACE deployment DEPLOYMENT
