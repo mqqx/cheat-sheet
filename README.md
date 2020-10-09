@@ -15,10 +15,8 @@ collection of useful commands and hints
 
 ### curl url with authorization token
 
-```console
-curl 'https://domain.dev' \
-    -H 'Authorization: Bearer 6d3918a1-bd8e-4e0b-9141-d0b347740906'
-```
+    curl 'https://domain.dev' \
+        -H 'Authorization: Bearer 6d3918a1-bd8e-4e0b-9141-d0b347740906'
 
 ## git
 
