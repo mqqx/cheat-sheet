@@ -22,12 +22,15 @@ collection of useful commands and hints
 
 ### change repository specific author
 
-add the following to `%PROJECT_BASE%/.git/config` file
+copy the following to `%PROJECT_BASE%` in terminal
     
+    cat >> .git/config <<- EOM
     [user]
-          name = mqqx
-          email = repository@mqqx.dev
-          
+            name = mqqx
+            email = repository@mqqx.dev
+    EOM
+    cat .git/config
+
 ## java
 
 ### useful libs
