@@ -8,6 +8,7 @@ collection of useful commands and hints
 - [curl](#curl)
 - [git](#git)
 - [java](#java)
+- [keystore](#keystore)
 - [kubectl](#kubectl)
 - [maven](#maven)
 
@@ -38,6 +39,22 @@ copy the following to `%PROJECT_BASE%` in terminal
 * Apache Batik - svg manipulation
 * Apache Commons / Google Guava - useful utility methods (`StringUtils`, `Strings`, `Sets`, ...)
 * Apache Tika - content type detection (`new Tika().detect(base64ByteArray)`)
+
+## keystore
+
+### list content
+
+    keytool -list -keystore KEYSTORE.jks
+    
+### remove alias from keystore
+
+    keytool -delete -alias ALIAS_NAME -list -keystore KEYSTORE.jks
+    
+### add cert with alias to keystore
+
+    keytool -import -trustcacerts -alias ALIAS_NAME -file CERT.cert -keystore KEYSTORE.jks
+    
+
 
 ## kubectl
 
