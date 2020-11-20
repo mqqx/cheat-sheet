@@ -11,6 +11,7 @@ collection of useful commands and hints
 - [keystore](#keystore)
 - [kubectl](#kubectl)
 - [maven](#maven)
+- [sql](#sql)
 
 ## curl
 
@@ -54,8 +55,6 @@ copy the following to `%PROJECT_BASE%` in terminal
 
     keytool -import -trustcacerts -alias ALIAS_NAME -file CERT.cert -keystore KEYSTORE.jks
     
-
-
 ## kubectl
 
 ### list all deployments
@@ -85,3 +84,13 @@ additional properties: https://www.mojohaus.org/versions-maven-plugin/use-reacto
 ### execute enforcer
 
     mvn validate
+    
+## sql
+
+### generate test data
+
+generate test data in postgresql
+
+    INSERT INTO item (id, name)
+    SELECT x.id, 'item #' || x.id
+      FROM generate_series(1,100000) AS x(id);
