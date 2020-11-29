@@ -7,6 +7,7 @@ collection of useful commands and hints
 - [contents](#contents)
 - [curl](#curl)
 - [git](#git)
+- [helpful links](#helpful links)
 - [java](#java)
 - [keystore](#keystore)
 - [kubectl](#kubectl)
@@ -32,6 +33,13 @@ copy the following to `%PROJECT_BASE%` in terminal
             email = repository@mqqx.dev
     EOM
     cat .git/config
+
+## helpful links
+
+### app development
+
+* building modern web apps / saas [The Twelve-Factor App](https://12factor.net)
+* easy and fast deployment with [netlify](https://www.netlify.com/)
 
 ## java
 
@@ -94,3 +102,6 @@ generate test data in postgresql
     INSERT INTO item (id, name)
     SELECT x.id, 'item #' || x.id
       FROM generate_series(1,100000) AS x(id);
+
+
+
