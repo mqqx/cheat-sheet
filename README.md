@@ -92,7 +92,11 @@ additional properties: https://www.mojohaus.org/versions-maven-plugin/use-reacto
 ### execute enforcer
 
     mvn validate
-    
+
+### execute google java style guide
+
+    mvn git-code-format:format-code && mvn git-code-format:validate-code-format
+
 ## sql
 
 ### generate test data
