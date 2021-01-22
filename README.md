@@ -13,6 +13,7 @@ collection of useful commands and hints
 - [kubectl](#kubectl)
 - [maven](#maven)
 - [sql](#sql)
+- [shell](#shell)
 
 ## curl
 
@@ -107,5 +108,15 @@ generate test data in postgresql
     SELECT x.id, 'item #' || x.id
       FROM generate_series(1,100000) AS x(id);
 
+## shell
 
+### release blocked port
+
+find process blocking the port
+
+    sudo lsof -i :3000
+
+kill it
+
+    kill -9 <PID>
 
