@@ -7,7 +7,7 @@ collection of useful commands and hints
 - [contents](#contents)
 - [curl](#curl)
 - [git](#git)
-- [helpful links](#helpful links)
+- [helpful links](#helpful-links)
 - [java](#java)
 - [keystore](#keystore)
 - [kubectl](#kubectl)
