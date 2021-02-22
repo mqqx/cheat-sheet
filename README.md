@@ -112,11 +112,7 @@ generate test data in postgresql
 
 ### release blocked port
 
-find process blocking the port
+find & kill process blocking the port
 
-    sudo lsof -i :3000
-
-kill it
-
-    kill -9 <PID>
+    kill -9 $(sudo lsof -ti :3000)
 
