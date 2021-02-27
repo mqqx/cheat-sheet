@@ -35,6 +35,13 @@ copy the following to `%PROJECT_BASE%` in terminal
     EOM
     cat .git/config
 
+### prune local tracking branches not existing on remote in all immediate subdirectories
+
+    for d in ./*/ ; do (cd "$d" && git fetch -p && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d); done  
+
+* see [pruning of local tracking branches not existing on remote](https://stackoverflow.com/a/17029936/3012347)
+* see [running script in all immediate subdirectories](https://stackoverflow.com/a/41553472/3012347)
+
 ## helpful links
 
 ### app development
@@ -116,3 +123,6 @@ find & kill process blocking the port
 
     kill -9 $(sudo lsof -ti :3000)
 
+### loop all immediate subdirectories with command
+
+    for d in ./*/ ; do (cd "$d" && ls -al); done
