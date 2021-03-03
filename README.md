@@ -105,6 +105,12 @@ additional properties: https://www.mojohaus.org/versions-maven-plugin/use-reacto
 
     mvn git-code-format:format-code && mvn git-code-format:validate-code-format
 
+### fixing intellij build
+
+this fixes the project in intellij when it fails to build and invalidate cache does not help
+
+    mvn idea:idea
+
 ## sql
 
 ### generate test data
