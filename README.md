@@ -42,6 +42,11 @@ copy the following to `%PROJECT_BASE%` in terminal
 * see [pruning of local tracking branches not existing on remote](https://stackoverflow.com/a/17029936/3012347)
 * see [running script in all immediate subdirectories](https://stackoverflow.com/a/41553472/3012347)
 
+### list all remote branches of all immediate subdirectories ignoring master and develop
+
+    for d in ./*/ ; do (cd "$d" && (for branch in `git branch -r | grep 'origin' | grep -v 'master$'| grep -v 'develop$'| grep -v HEAD`; do echo -e `echo "$d" && git show --format="%an %cr %ci" $branch | head -n 1` \\t$branch; done | sort -r)); done
+
+
 ## helpful links
 
 ### app development
