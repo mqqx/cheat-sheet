@@ -128,6 +128,12 @@ generate test data in postgresql
 
 ## shell
 
+### remove command from zsh history
+
+removes all lines containing command_to_remove
+
+    LC_ALL=C sed -i '' '/command_to_remove/d' $HISTFILE
+
 ### release blocked port
 
 find & kill process blocking the port
