@@ -116,6 +116,10 @@ this fixes the project in intellij when it fails to build and invalidate cache d
 
     mvn idea:idea
 
+### remove and reload all repository dependencies
+
+    mvn dependency:purge-local-repository
+
 ## sql
 
 ### generate test data
